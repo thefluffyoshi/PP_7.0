@@ -1,0 +1,41 @@
+import java.util.Random;
+public class Coin
+{
+    private final int HEADS = 0;
+    private final int TAILS = 1;
+    private final int WORTH = 10;
+    private int face;
+
+    public Coin ()
+    {
+        flip();
+    }//end constructor
+
+    public void flip()
+    {
+        face = (int) (Math.random() * 2);
+    }//end flip
+
+    public boolean isHeads()
+    {
+        return (face == HEADS);
+    }//end boolean
+
+    public String toString()
+    {
+        String faceName;
+        if (face == HEADS)
+        {
+            faceName = "Heads";
+        }//end if
+
+        else
+        {
+            faceName = "Tails";
+        }//end else
+
+        return faceName;
+
+    }//end toString
+
+}//end coin
