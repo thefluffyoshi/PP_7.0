@@ -1,0 +1,80 @@
+public class MonetaryCoin
+{
+    public static void main(String[] args)
+    {
+        final int NUMFLIP = 50;
+        int heads = 0;
+        int tails = 0;
+
+        SecondCoin penny = new SecondCoin(1);
+        SecondCoin nickel = new SecondCoin(5);
+        SecondCoin dime = new SecondCoin(10);
+        SecondCoin quarter = new SecondCoin(25);
+
+        //penny
+        for (int i = 1; i <= NUMFLIP; i++)
+        {
+            penny.flip();
+
+            if (penny.isHeads())
+            {
+                heads++;
+            }//end if penny
+            else
+            {
+                tails++;
+            }//end else penny
+        }//end for penny
+
+        //nickel
+        for (int i = 1; i <= NUMFLIP; i++)
+        {
+            nickel.flip();
+
+            if (nickel.isHeads())
+            {
+                heads++;
+            }//end if nickel
+            else
+            {
+                tails++;
+            }//end else nickel
+        }//end for nickel
+
+        //dime
+        for (int i = 1; i <= NUMFLIP; i++)
+        {
+            dime.flip();
+            if (dime.isHeads())
+            {
+                heads++;
+            }//end if dime
+            else
+            {
+                tails++;
+            }//end else dime
+        }//end for dime
+
+        //quarter
+        for (int i = 1; i <= NUMFLIP; i++)
+        {
+            quarter.flip();
+            if (quarter.isHeads())
+            {
+                heads++;
+            }//end if quarter
+            else
+            {
+                tails++;
+            }//end else quarter
+        }//end for quarter
+
+        System.out.println("Num Flips: " + NUMFLIP);
+        System.out.println("Num Heads: " + heads);
+        System.out.println("Num Tails: " + tails + "\n");
+        System.out.println("Value of coin 1: " + penny);
+        System.out.println("Value of coin 2: " + nickel);
+        System.out.println("Value of coin 3: " + dime);
+        System.out.println("Value of coin 4: " + quarter);
+    }//end main
+}//end monetary
