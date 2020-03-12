@@ -1,0 +1,22 @@
+public class SecondCoin extends Coin
+{
+    private int value;
+
+    public SecondCoin(int value)
+    {
+        this.value = value;
+    }//end constructor
+
+    public int getValue()
+    {
+        return value;
+    }//end getter
+
+    public String toString()
+    {
+        String output = "";
+        output += value;
+        return output;
+    }//end toString
+
+}//end secondcoin
